@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .done {
+            text-decoration: line-through;
+        }
+    </style>
+  </head>
+  <body>
+  <ul>
+      <li>TODO 1<button>done</button></li>
+      <li>TODO 2<button>done</button></li>
+      <li>TODO 3<button>done</button></li>
+  </ul>
+  <script>
+      const buttonList = document.querySelectorAll('button');
+      [...buttonList].forEach((button) => {
+          button.addEventListener('click', () => {
+            const li = button.closest('li');
+            li.classList.add('done');
+          })
+          
+      });
+
+  </script>
+  </body>
+</html>
